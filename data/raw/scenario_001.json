@@ -1,0 +1,140 @@
+[
+  {
+    "event_id": "evt-0001",
+    "timestamp": "2026-10-01T08:42:11Z",
+    "event_type": "LOGIN_FAILURE",
+    "source": "authentication",
+    "hostname": "WS-001",
+    "username": "analyst",
+    "source_ip": "10.10.20.45",
+    "action": "authentication_failed",
+    "severity": "low",
+    "metadata": {
+      "reason": "invalid_password"
+    }
+  },
+  {
+    "event_id": "evt-0002",
+    "timestamp": "2026-10-01T08:42:19Z",
+    "event_type": "LOGIN_FAILURE",
+    "source": "authentication",
+    "hostname": "WS-001",
+    "username": "analyst",
+    "source_ip": "10.10.20.45",
+    "action": "authentication_failed",
+    "severity": "low",
+    "metadata": {
+      "reason": "invalid_password"
+    }
+  },
+  {
+    "event_id": "evt-0003",
+    "timestamp": "2026-10-01T08:42:27Z",
+    "event_type": "LOGIN_FAILURE",
+    "source": "authentication",
+    "hostname": "WS-001",
+    "username": "analyst",
+    "source_ip": "10.10.20.45",
+    "action": "authentication_failed",
+    "severity": "medium",
+    "metadata": {
+      "reason": "invalid_password"
+    }
+  },
+  {
+    "event_id": "evt-0004",
+    "timestamp": "2026-10-01T08:43:02Z",
+    "event_type": "LOGIN_SUCCESS",
+    "source": "authentication",
+    "hostname": "WS-001",
+    "username": "analyst",
+    "source_ip": "10.10.20.45",
+    "action": "authentication_success",
+    "severity": "medium",
+    "metadata": {
+      "authentication_method": "password"
+    }
+  },
+  {
+    "event_id": "evt-0005",
+    "timestamp": "2026-10-01T08:43:14Z",
+    "event_type": "PROCESS_CREATED",
+    "source": "endpoint",
+    "hostname": "WS-001",
+    "username": "analyst",
+    "source_ip": "10.10.20.45",
+    "process": "powershell.exe",
+    "action": "process_started",
+    "severity": "high",
+    "metadata": {
+      "parent_process": "explorer.exe",
+      "command": "powershell -NoProfile"
+    }
+  },
+  {
+    "event_id": "evt-0006",
+    "timestamp": "2026-10-01T08:44:03Z",
+    "event_type": "NETWORK_DISCOVERY",
+    "source": "network",
+    "hostname": "WS-001",
+    "username": "analyst",
+    "source_ip": "10.10.20.45",
+    "destination_ip": "10.10.20.0/24",
+    "action": "network_scan",
+    "severity": "high",
+    "metadata": {
+      "ports_scanned": [
+        22,
+        80,
+        135,
+        139,
+        443,
+        445
+      ]
+    }
+  },
+  {
+    "event_id": "evt-0007",
+    "timestamp": "2026-10-01T08:45:18Z",
+    "event_type": "NETWORK_CONNECTION",
+    "source": "network",
+    "hostname": "WS-001",
+    "username": "analyst",
+    "source_ip": "10.10.20.45",
+    "destination_ip": "10.10.20.15",
+    "action": "outbound_connection",
+    "severity": "high",
+    "metadata": {
+      "destination_port": 445,
+      "protocol": "TCP"
+    }
+  },
+  {
+    "event_id": "evt-0008",
+    "timestamp": "2026-10-01T08:46:22Z",
+    "event_type": "PRIVILEGE_CHANGE",
+    "source": "identity",
+    "hostname": "WS-001",
+    "username": "analyst",
+    "action": "privilege_escalation",
+    "severity": "critical",
+    "metadata": {
+      "previous_role": "user",
+      "new_role": "administrator"
+    }
+  },
+  {
+    "event_id": "evt-0009",
+    "timestamp": "2026-10-01T08:48:10Z",
+    "event_type": "FILE_ACCESS",
+    "source": "filesystem",
+    "hostname": "WS-001",
+    "username": "analyst",
+    "action": "sensitive_file_read",
+    "severity": "critical",
+    "metadata": {
+      "file": "financial_records.csv",
+      "classification": "confidential"
+    }
+  }
+]
